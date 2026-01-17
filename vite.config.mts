@@ -12,9 +12,6 @@ import { fileURLToPath, URL } from 'node:url'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
-    VueRouter({
-      dts: 'src/typed-router.d.ts',
-    }),
     Vue({
       template: { transformAssetUrls },
     }),
@@ -43,10 +40,6 @@ export default defineConfig({
   optimizeDeps: {
     exclude: [
       'vuetify',
-      'vue-router',
-      'unplugin-vue-router/runtime',
-      'unplugin-vue-router/data-loaders',
-      'unplugin-vue-router/data-loaders/basic',
     ],
   },
   define: { 'process.env': {} },
